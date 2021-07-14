@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: api
+          uri: https://wwww.baidu.com
+          predicates:
+            - Header=host,([a-zA-Z0-9]+\.[a-zA-Z0-9]+\.[a-zA-Z0-9]+)
+          filters:
+            - UriHostPlaceholderFilter
