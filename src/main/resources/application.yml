@@ -15,11 +15,10 @@ spring:
           filters:
             - CachePlaceholderFilter
   redis:
-    host: 120.78.168.217
-    port: 8905
-    password: XADev2021
+    host: 127.0.0.1
+    port: 6379
     timeout: 1000
-    database: 1
+    database: 0
 
 
 xa:
