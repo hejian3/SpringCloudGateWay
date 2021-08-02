@@ -8,3 +8,20 @@ spring:
             - Header=host,([a-zA-Z0-9]+\.[a-zA-Z0-9]+\.[a-zA-Z0-9]+)
           filters:
             - UriHostPlaceholderFilter
+        - id: ridingCardH5Config
+          uri: http://express.serverless-devs-express.1038819456472827.cn-shenzhen.fc.devsapp.net
+          predicates:
+            - Path=/ridingCardH5Config/{clientName}
+          filters:
+            - CachePlaceholderFilter
+  redis:
+    host: 120.78.168.217
+    port: 8905
+    password: XADev2021
+    timeout: 1000
+    database: 1
+
+
+xa:
+  gateway:
+    prefix: xa_front_cache_
